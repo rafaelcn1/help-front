@@ -1,1 +1,49 @@
-<p>nav works!</p>
+<!-- 
+    Este código é escrito em Angular e utiliza o Material Design para criar um drawer (gaveta) lateral com uma lista de navegação. 
+    O drawer é composto por um container (mat-drawer-container) que contém o drawer propriamente dito (mat-drawer) e um conteúdo (div.sidenav-content). 
+    A lista de navegação é criada com o componente mat-nav-list e cada item da lista é criado com o componente  a.mat-list-item. 
+    Cada item da lista contém um ícone (i.material-icons) e um texto. O botão para abrir/fechar o drawer é criado com o componente button.mat-icon-button e utiliza o ícone de menu (mat-icon).
+-->
+
+<mat-drawer-container class="container" autosize>
+    <!-- Cria um container para o drawer -->
+    <mat-drawer #drawer class="sidenav" mode="side">
+        <!-- Cria o drawer com a classe sidenav e o modo side -->
+        <mat-nav-list class="nav-list">
+            <!-- Cria uma lista de navegação -->
+            <a mat-list-item routerLink="/">
+                <!-- Cria um item da lista com um link para a rota '/' -->
+                <i class="material-icons">home</i> Home
+                <!-- Adiciona um ícone e o texto 'Home' -->
+            </a>
+            <a mat-list-item routerLink="/">
+                <!-- Cria um item da lista com um link para a rota '/' -->
+                <i class="material-icons">account_circle</i> Técnicos
+                <!-- Adiciona um ícone e o texto 'Técnicos' -->
+            </a>
+            <a mat-list-item routerLink="/">
+                <!-- Cria um item da lista com um link para a rota '/' -->
+                <i class="material-icons">person</i> Clientes
+                <!-- Adiciona um ícone e o texto 'Clientes' -->
+            </a>
+            <a mat-list-item routerLink="/">
+                <!-- Cria um item da lista com um link para a rota '/' -->
+                <i class="material-icons">code</i> Github
+                <!-- Adiciona um ícone e o texto 'Github' -->
+            </a>
+            <a mat-list-item routerLink="/">
+                <!-- Cria um item da lista com um link para a rota '/' -->
+                <i class="material-icons">logout</i> Logout
+                <!-- Adiciona um ícone e o texto 'Logout' -->
+            </a>
+        </mat-nav-list>
+    </mat-drawer>
+
+    <div class="sidenav-content">
+        <!-- Cria um conteúdo para o drawer -->
+        <button class="menu" (click)="drawer.toggle()" mat-icon-button>
+            <!-- Cria um botão para abrir/fechar o drawer -->
+            <mat-icon>menu</mat-icon> <!-- Adiciona um ícone de menu -->
+        </button>
+    </div>
+</mat-drawer-container>
