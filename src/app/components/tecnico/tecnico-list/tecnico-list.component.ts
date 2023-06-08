@@ -1,6 +1,7 @@
 import { AfterViewInit, Component, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
+import { Tecnico } from 'src/app/models/tecnico';
 
 @Component({
   selector: 'app-tecnico-list',
@@ -8,8 +9,22 @@ import { MatTableDataSource } from '@angular/material/table';
   styleUrls: ['./tecnico-list.component.css']
 })
 export class TecnicoListComponent implements AfterViewInit {
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
-  dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
+
+  ELEMENT_DATA: Tecnico[] = [
+    {
+      id: 1,
+      nome: 'Rafael Cunha',
+      cpf: '123.456.789-10',
+      email: 'rafaelcn1@mail.com',
+      senha: '123',
+      perfis: ['0'],
+      dataCriacao: '07/06/2023'
+    }
+  ]
+
+  displayedColumns: string[] = ['id', 'nome', 'cpf', 'email', 'acoes'];
+  
+  dataSource = new MatTableDataSource<Tecnico>(this.ELEMENT_DATA);
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
@@ -18,6 +33,8 @@ export class TecnicoListComponent implements AfterViewInit {
   }
 }
 
+
+/*
 export interface PeriodicElement {
   name: string;
   position: number;
@@ -46,4 +63,4 @@ const ELEMENT_DATA: PeriodicElement[] = [
   {position: 18, name: 'Argon', weight: 39.948, symbol: 'Ar'},
   {position: 19, name: 'Potassium', weight: 39.0983, symbol: 'K'},
   {position: 20, name: 'Calcium', weight: 40.078, symbol: 'Ca'},
-];
+];*/
