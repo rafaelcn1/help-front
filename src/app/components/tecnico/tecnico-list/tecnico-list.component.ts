@@ -19,11 +19,20 @@ export class TecnicoListComponent implements AfterViewInit {
       senha: '123',
       perfis: ['0'],
       dataCriacao: '07/06/2023'
+    },
+    {
+      id: 2,
+      nome: 'Gilberto Cruz',
+      cpf: '987.654.321-00',
+      email: 'gilberto@mail.com',
+      senha: '456',
+      perfis: ['1', '0'],
+      dataCriacao: '07/06/2023'
     }
   ]
 
   displayedColumns: string[] = ['id', 'nome', 'cpf', 'email', 'acoes'];
-  
+
   dataSource = new MatTableDataSource<Tecnico>(this.ELEMENT_DATA);
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
