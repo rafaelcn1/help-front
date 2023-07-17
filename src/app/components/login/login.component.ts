@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { Credenciais } from 'src/app/models/credenciais';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-login',
@@ -16,10 +17,16 @@ export class LoginComponent implements OnInit {
   email = new FormControl(null, Validators.email); //Validando se é um email com o @
   senha = new FormControl(null, Validators.minLength(3)); //Validando se a senha tenha pelo menos 3 caract.
 
-  constructor(){}
+  constructor(private toast: ToastrService) {}
 
   ngOnInit(): void {
     
+  }
+
+  logar() {
+    this.toast.error('Usuário e/ou Senha inválidos!', 'Login'); //Primeiro parametro é a mensagem e o segundo é o titulo   
+    this.creds.email = ''
+    this.creds.senha = ''
   }
 
   validaCampos(): boolean {
