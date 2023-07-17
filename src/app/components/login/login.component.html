@@ -5,15 +5,15 @@
         <img src="assets\img\login-image.svg" alt="Imagem de login">
         <mat-form-field class="full-width" appearance="fill">
             <mat-label>Email</mat-label>
-            <input type="email" matInput placeholder="Ex. seu@email.com">
+            <input [formControl]="email" required [(ngModel)]="creds.email" name="email" type="email" matInput placeholder="Ex. seu@email.com">
         </mat-form-field>
 
         <mat-form-field class="full-width" appearance="fill">
             <mat-label>Senha</mat-label>
-            <input type="password" matInput placeholder="Ex. 123">
+            <input [formControl]="senha" required [(ngModel)]="creds.senha" name="senha" type="password" matInput placeholder="Ex. 123">
         </mat-form-field>
 
-        <button class="full-width mat-elevation-z4" mat-stroked-button color="primary">Enviar</button>
+        <button [disabled]="!validaCampos()" class="full-width mat-elevation-z4" mat-stroked-button color="primary">Enviar</button>
     </form>
 
 </div>
