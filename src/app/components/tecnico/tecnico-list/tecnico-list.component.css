@@ -10,3 +10,13 @@ table {
 mat-form-field {
     width: 100%;
 }
+
+button {
+    margin: 1.2rem 0;
+    width: 100%;
+}
+
+h1 {
+    width: 100%;
+    text-align: center;
+}
