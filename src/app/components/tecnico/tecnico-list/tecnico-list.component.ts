@@ -2,6 +2,7 @@ import { AfterViewInit, Component, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import { Tecnico } from 'src/app/models/tecnico';
+import { TecnicoService } from 'src/app/services/tecnico.service';
 
 @Component({
   selector: 'app-tecnico-list',
@@ -10,7 +11,7 @@ import { Tecnico } from 'src/app/models/tecnico';
 })
 export class TecnicoListComponent implements AfterViewInit {
 
-  ELEMENT_DATA: Tecnico[] = [
+  /*ELEMENT_DATA: Tecnico[] = [
     {
       id: 1,
       nome: 'Rafael Cunha',
@@ -29,17 +30,36 @@ export class TecnicoListComponent implements AfterViewInit {
       perfis: ['1', '0'],
       dataCriacao: '07/06/2023'
     }
-  ]
+  ]*/
 
+  ELEMENT_DATA: Tecnico[] = [];
   displayedColumns: string[] = ['id', 'nome', 'cpf', 'email', 'acoes'];
 
   dataSource = new MatTableDataSource<Tecnico>(this.ELEMENT_DATA);
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
-
+  
   ngAfterViewInit() {
-    this.dataSource.paginator = this.paginator;
+   //this.dataSource.paginator = this.paginator;
   }
+  constructor(private service: TecnicoService){}
+
+
+  findAll(){
+    this.service.findAll().subscribe(resposta => { // Quando for executado o metodo e a resposta do servidor chegar, sera inscrito (subscribe), esperando a resposta
+      this.ELEMENT_DATA = resposta //Quando a resposta chegar, irá preencher o ELEMENT_DATA que é um array ([]) com a resposta que chegou, que também é um array
+      //this.dataSource = new MatTableDataSource<Tecnico>(this.ELEMENT_DATA);
+      // OU já passa a resposta, pois é do mesmo tipo
+      this.dataSource = new MatTableDataSource<Tecnico>(resposta);
+      this.dataSource.paginator = this.paginator; // Paginação
+    });
+  }
+
+  ngOnInit(): void {
+    this.findAll();
+  }
+
+
 }
 
 
