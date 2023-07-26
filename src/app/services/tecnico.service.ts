@@ -14,4 +14,8 @@ export class TecnicoService {
   findAll(): Observable<Tecnico[]> { //Vai retornar um Observable com Array de Tecnicos
     return this.http.get<Tecnico[]>(API_CONFIG.baseUrl + '/tecnicos'); //Acessar a url do REST que retorna todos os tecnicos
   }
+
+  create(tecnico: Tecnico): Observable<Tecnico> { //Passando um tecnico como parametro e esperar um retorno Observable de tecnico
+    return this.http.post<Tecnico>(API_CONFIG.baseUrl + "/tecnicos", tecnico); //No post é o tipo do Tecnico que está
+  }
 }
