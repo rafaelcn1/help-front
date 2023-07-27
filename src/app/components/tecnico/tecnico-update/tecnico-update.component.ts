@@ -53,7 +53,6 @@ export class TecnicoUpdateComponent implements OnInit {
       this.toast.success("Técnico Atualizado com Sucesso!", "Update"); //Caso de sucesso
       this.router.navigate(['/tecnicos']);
     }, ex =>{ // Em caso de não cadastrar o usuário
-      console.log(ex)
       if(ex.error.errors){
         ex.error.errors.forEach(element => {
           this.toast.error(element.message);

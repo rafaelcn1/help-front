@@ -28,4 +28,9 @@ export class TecnicoService {
     //this.http.put<Tecnico>(<url> + <id>, <corpo>);
     return this.http.put<Tecnico>(API_CONFIG.baseUrl + "/tecnicos/" + tecnico.id, tecnico);
   }
+
+  delete(id: any): Observable<Tecnico> { //Poderia ser void, para seguir o padrão, está retornando o Observable<Tecnico>
+    //this.http.put<Tecnico>(<url> + <id>, <corpo>);
+    return this.http.delete<Tecnico>(API_CONFIG.baseUrl + "/tecnicos/" + id);
+  }
 }
