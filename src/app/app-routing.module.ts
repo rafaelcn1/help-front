@@ -7,6 +7,7 @@ import { LoginComponent } from './components/login/login.component';
 import { authGuard } from './auth/auth.guard';
 import { TecnicoCreateComponent } from './components/tecnico/tecnico-create/tecnico-create.component';
 import { TecnicoUpdateComponent } from './components/tecnico/tecnico-update/tecnico-update.component';
+import { TecnicoDeleteComponent } from './components/tecnico/tecnico-delete/tecnico-delete.component';
 
 
 
@@ -19,7 +20,8 @@ const routes: Routes = [
       {path: 'home',component: HomeComponent},
       {path: 'tecnicos',component: TecnicoListComponent},
       {path: 'tecnicos/create',component: TecnicoCreateComponent}, // quando for acessado a url tecnicos/create será reinderizado o TecnicoCreateComponent
-      {path: 'tecnicos/update/:id', component: TecnicoUpdateComponent} // quando for acessado a url tecnicos/update será reinderizado o TecnicoUpdateComponent, o /:id será a variavel da path 
+      {path: 'tecnicos/update/:id', component: TecnicoUpdateComponent}, // quando for acessado a url tecnicos/update será reinderizado o TecnicoUpdateComponent, o /:id será a variavel da path para buscar o tecnico que será atualizado
+      {path: 'tecnicos/delete/:id', component: TecnicoDeleteComponent} // quando for acessado a url tecnicos/delete será reinderizado o TecnicoDeleteComponent, o /:id será a variavel da path para buscar o tecnico que será atualizado
     ]
   }
 ];
