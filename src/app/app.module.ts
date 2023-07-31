@@ -42,6 +42,7 @@ import { TecnicoCreateComponent } from './components/tecnico/tecnico-create/tecn
 import { NgxMaskApplierService } from 'ngx-mask/lib/ngx-mask-applier.service';
 import { TecnicoUpdateComponent } from './components/tecnico/tecnico-update/tecnico-update.component';
 import { TecnicoDeleteComponent } from './components/tecnico/tecnico-delete/tecnico-delete.component';
+import { ClienteListComponent } from './cliente/cliente-list/cliente-list.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { TecnicoDeleteComponent } from './components/tecnico/tecnico-delete/tecn
     LoginComponent,
     TecnicoCreateComponent,
     TecnicoUpdateComponent,
-    TecnicoDeleteComponent
+    TecnicoDeleteComponent,
+    ClienteListComponent
   ],
   imports: [
     BrowserModule,

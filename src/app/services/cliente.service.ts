@@ -32,7 +32,7 @@ export class ClienteService {
   }
 
   delete(id: any): Observable<Cliente> {
-    this.url = this.url + id;
-    return this.http.delete<Cliente>(this.url);
+    let url: string = API_CONFIG.baseUrl + 'clientes/' + id;
+    return this.http.delete<Cliente>(url);
   }
 }
