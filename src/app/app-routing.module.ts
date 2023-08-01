@@ -8,7 +8,7 @@ import { authGuard } from './auth/auth.guard';
 import { TecnicoCreateComponent } from './components/tecnico/tecnico-create/tecnico-create.component';
 import { TecnicoUpdateComponent } from './components/tecnico/tecnico-update/tecnico-update.component';
 import { TecnicoDeleteComponent } from './components/tecnico/tecnico-delete/tecnico-delete.component';
-import { ClienteListComponent } from './cliente/cliente-list/cliente-list.component';
+import { ClienteListComponent } from './components/cliente/cliente-list/cliente-list.component';
 
 
 

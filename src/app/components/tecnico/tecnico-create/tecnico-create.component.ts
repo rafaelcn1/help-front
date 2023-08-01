@@ -5,6 +5,9 @@ import { ToastrService } from 'ngx-toastr';
 import { Tecnico } from 'src/app/models/tecnico';
 import { TecnicoService } from 'src/app/services/tecnico.service';
 
+
+
+
 @Component({
   selector: 'app-tecnico-create',
   templateUrl: './tecnico-create.component.html',
