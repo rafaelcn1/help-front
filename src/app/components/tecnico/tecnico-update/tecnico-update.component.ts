@@ -65,10 +65,11 @@ export class TecnicoUpdateComponent implements OnInit {
 
   addPerfil(perfil: any): void {
     if(this.tecnico.perfis.includes(perfil)){ // Se ao clicar o checkbox já estiver na lista de perfil
-      this.tecnico.perfis.slice(this.tecnico.perfis.indexOf(perfil), 1); // Será removido, o 1 quer dizer que será apenas o 1º caso
+      this.tecnico.perfis.splice(this.tecnico.perfis.indexOf(perfil), 1); // Será removido, o 1 quer dizer que será apenas o 1º caso
     } else {
       this.tecnico.perfis.push(perfil); // Senão, será adicionado
-    }    
+    } 
+    console.log(this.tecnico.perfis);   
   }
 
 }

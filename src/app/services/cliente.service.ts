@@ -9,7 +9,7 @@ import { API_CONFIG } from '../config/api.config';
 })
 export class ClienteService {
 
-  private url: string = API_CONFIG.baseUrl + 'clientes/'
+  private url: string = API_CONFIG.baseUrl + '/clientes/'
 
   constructor(private http: HttpClient) { }
 

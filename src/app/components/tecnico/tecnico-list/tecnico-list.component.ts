@@ -47,7 +47,7 @@ export class TecnicoListComponent implements AfterViewInit {
 
   findAll(){
     this.service.findAll().subscribe(resposta => { // Quando for executado o metodo e a resposta do servidor chegar, sera inscrito (subscribe), esperando a resposta
-      this.ELEMENT_DATA = resposta //Quando a resposta chegar, irá preencher o ELEMENT_DATA que é um array ([]) com a resposta que chegou, que também é um array
+      this.ELEMENT_DATA = resposta; //Quando a resposta chegar, irá preencher o ELEMENT_DATA que é um array ([]) com a resposta que chegou, que também é um array
       //this.dataSource = new MatTableDataSource<Tecnico>(this.ELEMENT_DATA);
       // OU já passa a resposta, pois é do mesmo tipo
       this.dataSource = new MatTableDataSource<Tecnico>(resposta);
