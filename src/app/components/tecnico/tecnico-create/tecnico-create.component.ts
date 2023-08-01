@@ -48,7 +48,6 @@ export class TecnicoCreateComponent implements OnInit {
       this.toast.success("Técnico Cadastrado com Sucesso!", "Cadastro"); //Caso de sucesso
       this.router.navigate(['/tecnicos']);
     }, ex =>{ // Em caso de não cadastrar o usuário
-      console.log(ex)
       if(ex.error.errors){
         ex.error.errors.forEach(element => {
           this.toast.error(element.message);
@@ -60,12 +59,11 @@ export class TecnicoCreateComponent implements OnInit {
   }
 
   addPerfil(perfil: any): void {  
-if(this.tecnico.perfis.includes(perfil)){ // Se ao clicar o checkbox já estiver na lista de perfil
-      this.tecnico.perfis.splice(this.tecnico.perfis.indexOf(perfil), 1); // Será removido, o 1 quer dizer que será apenas o 1º caso
-    } else {
-      this.tecnico.perfis.push(perfil); // Senão, será adicionad
-    }   
-    console.log(this.tecnico.perfis); 
+  if(this.tecnico.perfis.includes(perfil)){ // Se ao clicar o checkbox já estiver na lista de perfil
+        this.tecnico.perfis.splice(this.tecnico.perfis.indexOf(perfil), 1); // Será removido, o 1 quer dizer que será apenas o 1º caso
+      } else {
+        this.tecnico.perfis.push(perfil); // Senão, será adicionad
+      }   
   }
  
 }
