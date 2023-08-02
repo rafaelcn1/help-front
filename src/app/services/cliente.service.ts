@@ -14,8 +14,8 @@ export class ClienteService {
   constructor(private http: HttpClient) { }
 
   findById(id: any): Observable<Cliente> {
-    this.url = this.url + id;
-    return this.http.get<Cliente>(this.url);
+    let urlId = this.url + id;
+    return this.http.get<Cliente>(urlId);
   }
 
   findAll(): Observable<Cliente[]> {
@@ -27,8 +27,8 @@ export class ClienteService {
   }
 
   update(cliente: Cliente): Observable<Cliente> {
-    this.url = this.url + cliente.id;
-    return this.http.put<Cliente>(this.url, cliente);
+    let urlId = this.url + cliente.id;
+    return this.http.put<Cliente>(urlId, cliente);
   }
 
   delete(id: any): Observable<Cliente> {

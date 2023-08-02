@@ -28,7 +28,6 @@ export class ClienteListComponent implements AfterViewInit {
 
   findAll() {
     this.service.findAll().subscribe(resposta => {
-      console.log(resposta)
       this.ELEMENT_DATE = resposta;
       this.dataSource = new MatTableDataSource<Cliente>(resposta);
       this.dataSource.paginator = this.paginator;
