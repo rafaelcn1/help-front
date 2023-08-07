@@ -12,6 +12,7 @@ import { ClienteListComponent } from './components/cliente/cliente-list/cliente-
 import { ClienteCreateComponent } from './components/cliente/cliente-create/cliente-create.component';
 import { ClienteUpdateComponent } from './components/cliente/cliente-update/cliente-update.component';
 import { ClienteDeleteComponent } from './components/cliente/cliente-delete/cliente-delete.component';
+import { ChamadoListComponent } from './components/chamado/chamado-list/chamado-list.component';
 
 
 
@@ -26,10 +27,15 @@ const routes: Routes = [
       {path: 'tecnicos/create',component: TecnicoCreateComponent}, // quando for acessado a url tecnicos/create será reinderizado o TecnicoCreateComponent
       {path: 'tecnicos/update/:id', component: TecnicoUpdateComponent}, // quando for acessado a url tecnicos/update será reinderizado o TecnicoUpdateComponent, o /:id será a variavel da path para buscar o tecnico que será atualizado
       {path: 'tecnicos/delete/:id', component: TecnicoDeleteComponent}, // quando for acessado a url tecnicos/delete será reinderizado o TecnicoDeleteComponent, o /:id será a variavel da path para buscar o tecnico que será atualizado
+     
+     // Quando acessar a url clientes, será reinderizado o componente ClienteListComponent
       {path: 'clientes',component: ClienteListComponent},
       {path: 'clientes/create',component: ClienteCreateComponent},
       {path: 'clientes/update/:id', component: ClienteUpdateComponent},
-      {path: 'clientes/delete/:id', component: ClienteDeleteComponent}
+      {path: 'clientes/delete/:id', component: ClienteDeleteComponent},
+
+      // Quando acessar a url chamados, será reinderizado o componente ChamadoListComponent
+      {path: 'chamados', component: ChamadoListComponent}
     ]
   }
 ];
