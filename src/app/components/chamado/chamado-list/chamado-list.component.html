@@ -8,9 +8,9 @@
     </mat-form-field>
 
     <mat-radio-group color="primary">
-        <mat-radio-button>Aberto</mat-radio-button>
-        <mat-radio-button>Andamento</mat-radio-button>
-        <mat-radio-button>Encerrado</mat-radio-button>
+        <mat-radio-button (click)="orderByStatus('ABERTO')" value="ABERTO">Aberto</mat-radio-button>
+        <mat-radio-button (click)="orderByStatus('ANDAMENTO')" value="ANDAMENTO">Andamento</mat-radio-button>
+        <mat-radio-button (click)="orderByStatus('ENCERRADO')" value="ENCERRADO">Encerrado</mat-radio-button>
     </mat-radio-group>
 
     <div class="mat-elevation-z8 tabelaClienteLista">
