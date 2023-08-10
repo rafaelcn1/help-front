@@ -12,8 +12,8 @@
         <div class="cliente">
             <mat-form-field appearance="fill">
                 <mat-label>Nome do Cliente</mat-label>
-                <mat-select [(ngModel)]="chamado.nomeCliente" name="nomeCliente" [formControl]="nomeCliente" required>
-                    <mat-option value="tecnico">RAFAEL</mat-option>
+                <mat-select [(ngModel)]="chamado.cliente" name="cliente" [formControl]="cliente" required>
+                    <mat-option *ngFor="let cliente of clientes" value="{{cliente.id}}">{{cliente.nome}}</mat-option>
                 </mat-select>
                 <mat-icon matSuffix>person</mat-icon>
             </mat-form-field>
@@ -22,8 +22,8 @@
         <div class="tecnico">
             <mat-form-field appearance="fill">
                 <mat-label>Nome do Técnico</mat-label>
-                <mat-select [(ngModel)]="chamado.nomeTecnico" name="tecnico" [formControl]="nomeTecnico" required>
-                    <mat-option value="tecnico">RAFAEL</mat-option>
+                <mat-select [(ngModel)]="chamado.tecnico" name="tecnico" [formControl]="tecnico" required>
+                    <mat-option *ngFor="let tecnico of tecnicos" value="{{tecnico.id}}">{{tecnico.nome}}</mat-option>
                 </mat-select>
                 <mat-icon matSuffix>person</mat-icon>
             </mat-form-field>

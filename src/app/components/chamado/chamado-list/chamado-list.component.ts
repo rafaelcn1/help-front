@@ -24,7 +24,8 @@ export class ChamadoListComponent implements OnInit {
   displayColumns: string[] = [
     "id",
     "titulo",
-    "nomeCliente",
+    "cliente",
+    "tecnico",
     "dataAbertura",
     "prioridade",
     "status",

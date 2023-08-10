@@ -8,6 +8,4 @@ export interface Chamado {
 	observacoes: String;
     tecnico: any;
     cliente: any;
-    nomeTecnico: String;
-    nomeCliente: String;
 }
