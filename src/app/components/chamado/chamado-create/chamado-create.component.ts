@@ -65,14 +65,11 @@ export class ChamadoCreateComponent implements OnInit {
     });
   }
   create(): void {
-    console.log(this.chamado);
+
     this.chamadoService.create(this.chamado).subscribe(resposta => {
-      this.toastService.success("Chamado: " + this.chamado.id + "cadastrado com sucesso!", "Chamado");
+      this.toastService.success("cadastrado com sucesso!", "Chamado");
       this.router.navigate(["/chamados"]);
     }, ex => {
-      console.log(ex);
-      console.log(this.chamado);
-      
       this.toastService.error(ex.error.error, "Chamado não cadastrado");
     })
   }
