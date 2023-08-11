@@ -24,4 +24,9 @@ export class ChamadoService {
     return this.http.put<Chamado>(url, chamado);
   }
 
+  findById(id: any): Observable<Chamado> {
+    let url = this.apiUrl + id;
+    return this.http.get<Chamado>(url);
+  }
+
 }

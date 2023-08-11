@@ -1,0 +1,51 @@
+.container {
+    width: 45%;
+    margin: auto;
+    padding: 1rem 1rem 3rem 1rem;
+    border-radius: .6rem;
+}
+
+h1 {
+    text-align: center;
+}
+
+img {
+    height: 8rem;
+    margin: auto;
+    text-align: center;
+    width: 100%;
+}
+
+.section {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+mat-form-field {
+    width: 100%;
+}
+
+button {
+    width: 100%;
+    margin: 0.5rem;
+}
+
+p {
+    text-align: center;
+    opacity: .5;
+    margin-top: 4rem;
+}
+
+.status-prioridade {
+    display: flex;
+    justify-content: space-between;
+}
+
+.status-prioridade mat-form-field {
+    width: 49%;
+}
+
+.observacao {
+    resize: none;
+}
