@@ -15,6 +15,7 @@ import { ClienteDeleteComponent } from './components/cliente/cliente-delete/clie
 import { ChamadoListComponent } from './components/chamado/chamado-list/chamado-list.component';
 import { ChamadoCreateComponent } from './components/chamado/chamado-create/chamado-create.component';
 import { ChamadoUpdateComponent } from './components/chamado/chamado-update/chamado-update.component';
+import { ChamadoReadComponent } from './components/chamado/chamado-read/chamado-read.component';
 
 
 
@@ -39,11 +40,8 @@ const routes: Routes = [
       // Quando acessar a url chamados, será reinderizado o componente ChamadoListComponent
       {path: 'chamados', component: ChamadoListComponent},
       {path: 'chamados/create', component: ChamadoCreateComponent},
-<<<<<<< HEAD
-      {path: 'chamados/update/:id', component: ChamadoUpdateComponent}
-=======
-      {path: 'chamados/update', component: ChamadoUpdateComponent}
->>>>>>> 77a55134bb9cc53473a192bce637ee2de91b08b1
+      {path: 'chamados/update/:id', component: ChamadoUpdateComponent},
+      {path: 'chamados/read/:id', component: ChamadoReadComponent}
     ]
   }
 ];
