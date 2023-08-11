@@ -63,7 +63,7 @@ export class ChamadoUpdateComponent {
   update(): void {
     this.chamadoService.update(this.chamado).subscribe(
       () => {
-        this.toast.success("Chamado Atualizado", "Update");
+        this.toast.success("Chamado: " + this.chamado.id + " - Atualizado", "Update");
         this.router.navigate(["/chamados"]);
       },
       (ex) => {
