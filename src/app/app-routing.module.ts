@@ -39,7 +39,11 @@ const routes: Routes = [
       // Quando acessar a url chamados, será reinderizado o componente ChamadoListComponent
       {path: 'chamados', component: ChamadoListComponent},
       {path: 'chamados/create', component: ChamadoCreateComponent},
+<<<<<<< HEAD
       {path: 'chamados/update/:id', component: ChamadoUpdateComponent}
+=======
+      {path: 'chamados/update', component: ChamadoUpdateComponent}
+>>>>>>> 77a55134bb9cc53473a192bce637ee2de91b08b1
     ]
   }
 ];
